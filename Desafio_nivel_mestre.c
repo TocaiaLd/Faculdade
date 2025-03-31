@@ -92,64 +92,102 @@ int main(){
     printf("\n\nCarta 2:\nEstado: %c\nCódigo: %s\nNome da cidade: %s\nPopulação: %d\nÁrea: %.2f km²\nPib: %.2f bilhões de reais\nNúmero de pontos turísticos: %d\nDensidade Populacional: %.2f hab/km²\nPIB per capita: %.2f reais\nSuper Poder: %.2f", estado_final2, codigo_da_carta2, cidade_da_carta2, populacao_da_carta2, area_da_carta2, pib_da_carta2, numero_dePontosTuristicos_carta2, densidade_populacional_carta2, pib_per_capita_carta2, superpoder_carta2);
 
     //Comparação entre as cartas
-    printf("\nComparação entre as cartas:");
+    int atributo_de_comp;
+
+    printf("\n\nSerá feita a comparação entre as cartas %s e %s:\nQual atributo voce deseja comparar?\n1.População\n2.Área\n3.PIB\n4.Numero de pontos turisticos\n5.Densidade Demográfica\n6.Pib per capita\n7.Super Poder\n", cidade_da_carta1, cidade_da_carta2);
+
+    scanf("%d", &atributo_de_comp);
+
+    switch (atributo_de_comp)
+    {
+    case 1:
+        if(populacao_da_carta1 > populacao_da_carta2){
+            printf("\nPopulação: carta 1 venceu");
+        }else if(populacao_da_carta1 < populacao_da_carta2){
+            printf("\nPopulação: carta 2 venceu");
+        }else{
+            printf("\nPopulação: Empate");
+        }
+        break;
+    case 2:
+        if(area_da_carta1 > area_da_carta2){
+            printf("\nArea: carta 1 venceu");
+        }else if(area_da_carta1 < area_da_carta2){
+            printf("\nArea: carta 2 venceu");
+        }else{
+            printf("\nArea: Empate");
+        }
+        break;
+
+    case 3:
+        if(pib_da_carta1 > pib_da_carta2){
+            printf("\nPIB: carta 1 venceu");
+        }else if(pib_da_carta1 < pib_da_carta2){
+            printf("\nPIB: carta 2 venceu");
+        }else{
+            printf("\nPIB: Empate");
+        }
+        break;
+
+    case 4:
+        if(numero_dePontosTuristicos_carta1 > numero_dePontosTuristicos_carta2){
+            printf("\nPontos Turisticos: carta 1 venceu");
+        }else if(numero_dePontosTuristicos_carta1 < numero_dePontosTuristicos_carta2){
+            printf("\nPontos Turisticos: carta 2 venceu");
+        }else{
+            printf("\nPontos Turisticos: Empate");
+        }
+        break;
+    
+    case 5:
+        if(densidade_populacional_carta1 < densidade_populacional_carta2){
+            printf("\nDensidade populacional: carta 1 venceu");
+        }else if(densidade_populacional_carta1 > densidade_populacional_carta2){
+            printf("\nDensidade populacional: carta 2 venceu");
+        }else{
+            printf("\nDensidade populacional: Empate");
+        }
+        break;
+
+    case 6:
+        if(pib_per_capita_carta1 > pib_per_capita_carta2){
+            printf("\nPib per capita: carta 1 venceu");
+        }else if(pib_per_capita_carta1 < pib_per_capita_carta2){
+            printf("\nPib per capita: carta 2 venceu");
+        }else{
+            printf("\nPib per capita: Empate");
+        }
+        break;
+
+    case 7:
+        if(superpoder_carta1 > superpoder_carta2){
+            printf("\nSuperpoder: carta 1 venceu");
+        }else if(pib_per_capita_carta1 < pib_per_capita_carta2){
+            printf("\nSuperpoder: carta 2 venceu");
+        }else{
+            printf("\nSuperpoder: Empate");
+        }
+        break;
+
+    default:
+        printf("Não houve uma entrada valida");
+        break;
+    }
     
     // variaveis da comparação
-    if(populacao_da_carta1 > populacao_da_carta2){
-        printf("\n\nPopulação: carta 1 venceu");
-    }else if(populacao_da_carta1 < populacao_da_carta2){
-        printf("\n\nPopulação: carta 2 venceu");
-    }else{
-        printf("\n\nPopulação: Empate");
-    }
+    
 
-    if(area_da_carta1 > area_da_carta2){
-        printf("\nArea: carta 1 venceu");
-    }else if(area_da_carta1 < area_da_carta2){
-        printf("\nArea: carta 2 venceu");
-    }else{
-        printf("\nArea: Empate");
-    }
+    
 
-    if(pib_da_carta1 > pib_da_carta2){
-        printf("\nPIB: carta 1 venceu");
-    }else if(pib_da_carta1 < pib_da_carta2){
-        printf("\nPIB: carta 2 venceu");
-    }else{
-        printf("\nPIB: Empate");
-    }
+    
 
-    if(numero_dePontosTuristicos_carta1 > numero_dePontosTuristicos_carta2){
-        printf("\nPontos Turisticos: carta 1 venceu");
-    }else if(numero_dePontosTuristicos_carta1 < numero_dePontosTuristicos_carta2){
-        printf("\nPontos Turisticos: carta 2 venceu");
-    }else{
-        printf("\nPontos Turisticos: Empate");
-    }
+    
 
-    if(densidade_populacional_carta1 < densidade_populacional_carta2){
-        printf("\nDensidade populacional: carta 1 venceu");
-    }else if(densidade_populacional_carta1 > densidade_populacional_carta2){
-        printf("\nDensidade populacional: carta 2 venceu");
-    }else{
-        printf("\nDensidade populacional: Empate");
-    }
+    
 
-    if(pib_per_capita_carta1 > pib_per_capita_carta2){
-        printf("\nPib per capita: carta 1 venceu");
-    }else if(pib_per_capita_carta1 < pib_per_capita_carta2){
-        printf("\nPib per capita: carta 2 venceu");
-    }else{
-        printf("\nPib per capita: Empate");
-    }
+    
 
-    if(superpoder_carta1 > superpoder_carta2){
-        printf("\nSuperpoder: carta 1 venceu");
-    }else if(pib_per_capita_carta1 < pib_per_capita_carta2){
-        printf("\nSuperpoder: carta 2 venceu");
-    }else{
-        printf("\nSuperpoder: Empate");
-    }
+    
 
    
 
