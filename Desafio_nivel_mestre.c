@@ -95,17 +95,66 @@ int main(){
     printf("\nComparação entre as cartas:");
     
     // variaveis da comparação
-    int comp_cartas_populacao = populacao_da_carta1 > populacao_da_carta2;
-    int comp_cartas_area = area_da_carta1 > area_da_carta2;
-    int comp_cartas_pib = pib_da_carta1 > pib_da_carta2;
-    int comp_cartas_turisticos = numero_dePontosTuristicos_carta1 > numero_dePontosTuristicos_carta2;
-    int com_densidade_populacao = densidade_populacional_carta1 < densidade_populacional_carta2;
-    int comp_pib_per_capita = pib_per_capita_carta1 > pib_per_capita_carta2;
-    int comp_cartas_superPoder =  superpoder_carta1 > superpoder_carta2;
-    
-    // Saída de dados da comparação
-    printf("\n\nPopulação: %d\nÁrea: %d \nPib: %d \nNúmero de pontos turísticos: %d\nDensidade Populacional: %d \nPIB per capita: %d \nSuper Poder: %d", comp_cartas_populacao, comp_cartas_area, comp_cartas_pib, comp_cartas_turisticos, comp_cartas_populacao, comp_pib_per_capita, comp_cartas_superPoder);
+    if(populacao_da_carta1 > populacao_da_carta2){
+        printf("\n\nPopulação: carta 1 venceu");
+    }else if(populacao_da_carta1 < populacao_da_carta2){
+        printf("\n\nPopulação: carta 2 venceu");
+    }else{
+        printf("\n\nPopulação: Empate");
+    }
+
+    if(area_da_carta1 > area_da_carta2){
+        printf("\nArea: carta 1 venceu");
+    }else if(area_da_carta1 < area_da_carta2){
+        printf("\nArea: carta 2 venceu");
+    }else{
+        printf("\nArea: Empate");
+    }
+
+    if(pib_da_carta1 > pib_da_carta2){
+        printf("\nPIB: carta 1 venceu");
+    }else if(pib_da_carta1 < pib_da_carta2){
+        printf("\nPIB: carta 2 venceu");
+    }else{
+        printf("\nPIB: Empate");
+    }
+
+    if(numero_dePontosTuristicos_carta1 > numero_dePontosTuristicos_carta2){
+        printf("\nPontos Turisticos: carta 1 venceu");
+    }else if(numero_dePontosTuristicos_carta1 < numero_dePontosTuristicos_carta2){
+        printf("\nPontos Turisticos: carta 2 venceu");
+    }else{
+        printf("\nPontos Turisticos: Empate");
+    }
+
+    if(densidade_populacional_carta1 < densidade_populacional_carta2){
+        printf("\nDensidade populacional: carta 1 venceu");
+    }else if(densidade_populacional_carta1 > densidade_populacional_carta2){
+        printf("\nDensidade populacional: carta 2 venceu");
+    }else{
+        printf("\nDensidade populacional: Empate");
+    }
+
+    if(pib_per_capita_carta1 > pib_per_capita_carta2){
+        printf("\nPib per capita: carta 1 venceu");
+    }else if(pib_per_capita_carta1 < pib_per_capita_carta2){
+        printf("\nPib per capita: carta 2 venceu");
+    }else{
+        printf("\nPib per capita: Empate");
+    }
+
+    if(superpoder_carta1 > superpoder_carta2){
+        printf("\nSuperpoder: carta 1 venceu");
+    }else if(pib_per_capita_carta1 < pib_per_capita_carta2){
+        printf("\nSuperpoder: carta 2 venceu");
+    }else{
+        printf("\nSuperpoder: Empate");
+    }
+
+   
 
     return 0;
+
+    
 }
 
